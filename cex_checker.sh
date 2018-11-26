@@ -7,9 +7,9 @@ if [[ -f product.html ]]; then
     rm -f product.html
 fi
 
-curl -s -o product.html https://uk.webuy.com/product.php?sku=${product_code}
+curl -s -L -o product.html https://uk.webuy.com/product-detail?id=${product_code}
 
-if [[ -n $(grep "buy this item" product.html) ]]; then
+if [[ -n $(grep "In stock online" product.html) ]]; then
     echo "This item is in stock"
 else
     echo "This item is still out of stock"
