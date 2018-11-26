@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #product_code=045496510060 #3DS Circle Pad Pro
 product_code=045496510107 #3DS XL Circle Pad Pro
 
